@@ -144,3 +144,7 @@ menu ul li a{
 .locations .pwestuhan{
     text-align: center;
 }
+
+.leaflet-control-attribution{
+    display: none;
+}

@@ -12,7 +12,7 @@ function initialLoad(){
 
         L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
         attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
-        maxZoom: 8,
+        maxZoom: 20,
         id: 'mapbox/streets-v11',
         accessToken: 'pk.eyJ1IjoibHRhcHN5IiwiYSI6ImNrNmpqdmN1MzBjaTEzbm51eHl5eDY0OXQifQ.73Nn_FvmKwm2Q-fLF2nLZw'
         }).addTo(map);
@@ -33,10 +33,10 @@ function initialLoad(){
             console.log(covid.confirmed.locations[x].coordinates.long);
             var marker = L.marker([covid.confirmed.locations[x].coordinates.lat,covid.confirmed.locations[x].coordinates.long],{icon: redIcon}).addTo(map).bindPopup("COVID-19: There are "+covid.confirmed.locations[x].latest+ " case/s reported here in "+covid.confirmed.locations[x].province+" , "+covid.confirmed.locations[x].country).openPopup();
             var circle = L.circle([covid.confirmed.locations[x].coordinates.lat, covid.confirmed.locations[x].coordinates.long], {
-                color: 'red',//color of the stroke for the radius parameter
+                color: 'none',//color of the stroke for the radius parameter
                 fillColor: 'maroon',//color of the fill for the radius parameter
-                fillOpacity: 0.5,
-                radius: 80000
+                fillOpacity: 0.2,
+                radius: 500000
             }).addTo(map);
         }
 
@@ -66,7 +66,7 @@ function initialLoad(){
         map.on('locationerror', onLocationError);
         
         function locate() {
-          map.locate({setView: true, maxZoom: 8});
+          map.locate({setView: true});
         }
         
         locate();
