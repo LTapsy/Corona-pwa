@@ -31,8 +31,3 @@ fetch("https://cors-anywhere.herokuapp.com/" + "https://coronavirus-tracker-api.
 
 
 }initialLoad();
-
-
-
-
-    
