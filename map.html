@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Covid-19</title>
+  <title>Covid - 19</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
@@ -27,7 +27,7 @@
       margin: 0;
     }
     html, body, #map {
-      height: 90vh;
+      height: 100vh;
     }
   </style>
 </head>
@@ -40,25 +40,28 @@
         <menu>
             <div class="banner"></div>
             <ul>
-                <li>
-                    <a href="./index.html">Latest</a>
-                </li>
-                <li>
-                    <a href="./map.html">Map & Location</a>
-                </li>
-                <li>
-                    <a href="./confirmed.html">Confirmed Cases</a>
-                </li>
-                <li>
-                    <a href="./death.html">Deaths</a>
-                </li>
-                <li>
-                  <a href="./recovered.html">Recoveries</a>
-                </li>
-            </ul>
-            <p class="creators">
-              Created by : Lord Tapulao & Floyd Santos
-          </p>
+              <li>
+                  <a href="./index.html">Latest Update</a>
+              </li>
+              <li>
+                  <a href="./map.html">Map & Location</a>
+              </li>
+              <li>
+                  <a href="./confirmed.html">Confirmed Cases</a>
+              </li>
+              <li>
+                  <a href="./death.html">Deaths</a>
+              </li>
+              <li>
+                  <a href="./recovered.html">Recovery Count</a>
+              </li>
+              <li>
+                  <a href="./resources.html">Resources</a>
+              </li>
+          </ul>
+          <p class="creators">
+            Created by : Lord Tapulao & Floyd Santos
+        </p>
         </menu>
     </aside>
     <main id="Container">
@@ -66,7 +69,12 @@
             <div id="map"></div>
         </div>
     </main>
-  
+    <div class="loadingScreen">
+      <div class="loadingScreenBox">
+          <i class="fas fa-biohazard fa-4x"></i>
+          <h3>Please Wait</h3>
+      </div>
+    </div>
 
   <script>
 
@@ -74,5 +82,6 @@
   </script>
   <script src="js/map.js"></script>
   <script src="js/sideMenu.js"></script>
+  <script src="js/loadingScreen.js"></script>
 </body>
 </html> 

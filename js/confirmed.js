@@ -12,7 +12,7 @@ function initialLoad(){
     
     
         confirmed += "<h1>"+covid.latest+"</h1>";
-        confirmed += "<h3>Confirmed Cases World Wide</h3>";
+        confirmed += "<h3>Confirmed Cases WorldWide</h3>";
         
         $(".cases").html(confirmed);
 
@@ -20,7 +20,23 @@ function initialLoad(){
 
         var locations = "";
         
-        console.log(covid.locations.length);
+        var locations = "";
+        var arse = covid.locations
+        function compare(a,b){
+            const locA = a.latest
+            const locB = b.latest
+
+            let comparison = 0;
+
+            if(locA > locB){
+                comparison = 1;
+            }else if(locA < locB){
+                comparison = -1;
+            }
+            return comparison * -1;
+        }
+
+        arse.sort(compare)
 
         // for(x = 0; x!= covid.locations.length;x++){
         for(x = 0; x!= covid.locations.length;x++){
@@ -34,6 +50,7 @@ function initialLoad(){
         }
     
         $(".locationContainer").html(locations);
+        $(".loadingScreen").hide();
     })
     .catch(err => {
         console.log(err);
