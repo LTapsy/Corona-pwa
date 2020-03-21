@@ -76,15 +76,10 @@ function initialLoad(){
             DeathsValueFourDaysAgo += covid.deaths.locations[x].history[FourDaysAgo];
     
             RecoveredValueToday += covid.recovered.locations[x].history[today];
-            console.log(RecoveredValueToday);
             RecoveredValueYesterday += covid.recovered.locations[x].history[yesterday];
-            console.log(RecoveredValueYesterday);
             RecoveredValueTwoDaysAgo += covid.recovered.locations[x].history[TwoDaysAgo];
-            console.log(RecoveredValueTwoDaysAgo);
             RecoveredValueThreeDaysAgo += covid.recovered.locations[x].history[ThreeDaysAgo];
-            console.log(RecoveredValueThreeDaysAgo);
             RecoveredValueFourDaysAgo += covid.recovered.locations[x].history[FourDaysAgo];
-            console.log(RecoveredValueFourDaysAgo);
         }
     
         var ctx = document.getElementById('myChart').getContext('2d');
