@@ -95,7 +95,7 @@ function initialLoad(){
                         ConfirmedValueThreeDaysAgo,
                         ConfirmedValueTwoDaysAgo,
                         ConfirmedValueYesterday,
-                        ConfirmedValueToday
+                        covid.latest.confirmed
                     ],
                     backgroundColor: [
                         '#7332a81c'
@@ -112,7 +112,7 @@ function initialLoad(){
                         DeathsValueThreeDaysAgo,
                         DeathsValueTwoDaysAgo,
                         DeathsValueYesterday,
-                        DeathsValueToday
+                        covid.latest.deaths
                     ],
                     backgroundColor: [
                         '#a8323a21'
@@ -129,7 +129,7 @@ function initialLoad(){
                         RecoveredValueThreeDaysAgo,
                         RecoveredValueTwoDaysAgo,
                         RecoveredValueYesterday,
-                        RecoveredValueToday
+                        covid.latest.recovered
                     ],
                     backgroundColor: [
                         '#ffffff00'
