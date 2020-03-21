@@ -262,6 +262,11 @@ menu ul li a{
 
 .safetyBox h2{
     margin:30px 0 10px;
+    font-weight: bolder;
+}
+
+.safetyBox h3{
+    font-weight: bolder;
 }
 
 .safetyBox img{
