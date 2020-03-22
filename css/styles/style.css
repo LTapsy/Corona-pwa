@@ -91,6 +91,7 @@ menu ul li a{
 
 .creators a{
     color:white;
+    text-decoration: underline;
 }
 
 .latestCases{
