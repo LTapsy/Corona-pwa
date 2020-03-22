@@ -85,12 +85,12 @@ menu ul li a{
 .creators{
     position:absolute;
     bottom:20px;
-    color:gray;
+    color:lightcoral;
     font-size:12px;
 }
 
 .creators a{
-    color:gray;
+    color:white;
 }
 
 .latestCases{
