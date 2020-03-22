@@ -244,11 +244,11 @@ menu ul li a{
     filter:drop-shadow(0px 0px 15px #00000038)
 }
 
-@media only screen and (min-width: 600px) {
+/* @media only screen and (min-width: 600px) {
     .graph{
         display:none;
     }
-}
+} */
 
 .safetyBox{
     padding:0 20px;
