@@ -82,7 +82,10 @@ function initialLoad(){
             RecoveredValueFourDaysAgo += covid.recovered.locations[x].history[FourDaysAgo];
         }
     
+        
         var ctx = document.getElementById('myChart').getContext('2d');
+        var ctx2 = document.getElementById('mobileChart').getContext('2d');
+
         var myChart = new Chart(ctx, {
             type: 'line',
             data: {
@@ -143,6 +146,88 @@ function initialLoad(){
                 
             ]
             },
+            maintainAspectRatio: false,
+            options: {
+                responsive: false,
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        boxWidth: 20,
+                        padding: 20
+                    }
+                },
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            min: 100
+                        }
+                    }]
+                }
+            }
+        });
+
+        var mobileChart = new Chart(ctx2, {
+            type: 'line',
+            data: {
+                labels: ['4 days ago', '3 days ago', '2 days ago', 'Yesterday', 'Today'],
+                datasets: [
+                {
+                    label: 'Confirmed Cases',
+                    data: [
+                        ConfirmedValueFourDaysAgo,
+                        ConfirmedValueThreeDaysAgo,
+                        ConfirmedValueTwoDaysAgo,
+                        ConfirmedValueYesterday,
+                        covid.latest.confirmed
+                    ],
+                    backgroundColor: [
+                        '#7332a81c'
+                    ],
+                    borderColor: [
+                        '#7332a8'
+                    ],
+                    borderWidth: 2
+                },
+                {
+                    label: 'Deaths',
+                    data: [
+                        DeathsValueFourDaysAgo,
+                        DeathsValueThreeDaysAgo,
+                        DeathsValueTwoDaysAgo,
+                        DeathsValueYesterday,
+                        covid.latest.deaths
+                    ],
+                    backgroundColor: [
+                        '#a8323a21'
+                    ],
+                    borderColor: [
+                        '#a8323a'
+                    ],
+                    borderWidth: 2
+                },
+                {
+                    label: 'Recovered',
+                    data: [
+                        RecoveredValueFourDaysAgo,
+                        RecoveredValueThreeDaysAgo,
+                        RecoveredValueTwoDaysAgo,
+                        RecoveredValueYesterday,
+                        covid.latest.recovered
+                    ],
+                    backgroundColor: [
+                        '#ffffff00'
+                    ],
+                    borderColor: [
+                        '#30b52d'
+                    ],
+                    borderWidth: 2
+                },
+                
+                
+            ]
+            },
+            maintainAspectRatio: false,
             options: {
                 responsive: true,
                 legend: {
@@ -162,6 +247,9 @@ function initialLoad(){
                 }
             }
         });
+
+        
+
     
 
     })
