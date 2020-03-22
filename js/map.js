@@ -66,7 +66,7 @@ function initialLoad(){
       map.on('locationerror', onLocationError);
       
       function locate() {
-        map.locate({setView: true,maxZoom:5});
+        map.locate({setView: true,maxZoom:8});
       }
       
       locate();
